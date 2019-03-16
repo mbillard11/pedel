@@ -1,0 +1,28 @@
+{
+  "name": "pedel",
+  "version": "1.0.0",
+  "description": "pedel is a public domain library web app",
+  "main": "pedel_server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "sha-256-js": "^1.0.3",
+    "sqlite3": "^4.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon pedel_server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbillard11/pedel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbillard11/pedel/issues"
+  },
+  "homepage": "https://github.com/mbillard11/pedel#readme"
+}
