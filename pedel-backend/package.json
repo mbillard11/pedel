@@ -7,7 +7,8 @@
     "express": "^4.16.4",
     "nodemon": "^1.18.10",
     "sha-256-js": "^1.0.3",
-    "sqlite3": "^4.0.6"
+    "sqlite3": "^4.0.6",
+    "vue": "^2.6.9"
   },
   "devDependencies": {},
   "scripts": {

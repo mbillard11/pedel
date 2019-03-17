@@ -9,9 +9,10 @@ form.addEventListener( 'submit', (evt) => {
     jsonUser = JSON.stringify(newUser)
     console.log(jsonUser)
 
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", __dirname + '/pedel_server', true);
-
+    //fetch('/register.html')
+    
+    //let xhr = new XMLHttpRequest();
+    //xhr.open("POST", 'index.html', true);
     //Send the proper header information along with the request
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 })
