@@ -4,8 +4,12 @@
   "description": "pedel is a public domain library web app",
   "main": "pedel_server.js",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
+    "morgan": "^1.9.1",
     "nodemon": "^1.18.10",
+    "sequelize": "^5.1.0",
     "sha-256-js": "^1.0.3",
     "sqlite3": "^4.0.6",
     "vue": "^2.6.9"

@@ -1,0 +1,17 @@
+
+Todo:
+  ☐ gitignore.io (read up on what makes a good gitignore) @low
+  ☐ Check todo extensions (figure out how to display under files) (Mark as done not responding) @low
+  ☐ Register section in pedel_server
+  ☐ Login section in pedel_server
+  ☐ Database (sequelizejs) @today 
+  ☐ Passport for auth? (http://www.passportjs.org/)
+  ☐ Check inputs variable (field) logic
+
+  [DONE] Add node_modules to gitignore 
+  [DONE] Update top donator (twitch)
+
+  NOTES:
+    - Old sqlite3 in dependencies was 4.0.6
+    - Sequelize problem was that we had sequelize installed in node_modules in the main pedel directory, and not in the pedel-backend's node_modules
+    - Google difference between data schema and model

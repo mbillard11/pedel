@@ -1,39 +1,92 @@
 const express = require('express')
 const sha256 = require('sha-256-js')
-const sqlite3 = require('sqlite3').verbose()
+//const sqlite3 = require('sqlite3').verbose()
+const cors = require('cors')
+const bodyParser = require('body-parser');
+const morgan = require('morgan')
+const Sequelize = require('sequelize');
 const app = express()
 const port = 3000
 
-const db = new sqlite3.Database( __dirname + '/users.db',
-    function(err) {
-        if ( !err ) {
-            console.log('opened users.db');
-        }
+
+// /home/mitchell/Desktop/pedel/pedel-backend/users.db'
+//const sequelize = new Sequelize("sqlite:./users.sqlite");
+
+const db = new Sequelize({
+    dialect: 'sqlite',
+    storage: './users.db'
+});
+
+db
+    .authenticate()
+    .then(() => {
+        console.log('Connection has been established successfully.');
+    })
+    .catch(err => {
+        console.error('Unable to connect to the database:', err);
     });
 
-app.use(express.static( __dirname + '/public'))
-app.get('/', (req, res) => res.sendFile("index.html"))
-app.get('/login.html', (req, res) => res.sendFile("login.html"))
-app.get('/register.html', (req, res) => res.sendFile("register.html"))
+// Sequelize model of the users table
+const User = db.define('user', {
+    username: {
+        type: Sequelize.STRING
+        // allowNull: false
+    },
+    email: {
+        type: Sequelize.STRING
+        // allowNull defaults to true
+    },
+    password: {
+        type: Sequelize.STRING
+        // allowNull defaults to true
+    },
+    type: {
+        type: Sequelize.STRING
+        // allowNull defaults to true
+    }
+});
+
+User.sync({ force: true });
+
+// morgan is used to give OPTIONS and POST information about the req    
+// app.use(morgan('combined'))
+
+// CORS (Cross-Origin Resource Sharing). Used for running 2 separate apps?
+app.use(cors({
+    origin: '*'
+}))
+
+app.use(bodyParser.json())
+//app.use(express.static( __dirname + '/public'))
+//app.get('/', (req, res) => res.sendFile("index.html"))
+// [server] -> [client]  localhost:3000/ 
 
 
 // Register
 app.post('/register' , (req, res) => {
     // req will be what user send for frontend page from your login form like (email, password)
     // req is json so part of data you need is in `body` object
-    //const { username, email, password } = req.body;
+    const { username, email, password } = req.body;
+    // TODO: Comment/remove this
     console.log(req.body)
+
             
     // now you want to validate data that client sent 
-    // if ( !username || !password || !email ) {
-    //     res.status(400).json({ success: false, message: 'info not enough', });
-    // }
+    if ( !username || !password || !email ) {
+        res.status(200).json({ success: true, message: 'Missing field', });
+    }
+    
+
+
 
     // see if name or email is occupied
-    // this is User.find is from mongo model but you find here if that email exists in your db
-    // your is sql
-    //const user = await User.findOne({ $or: [ { username }, { email } ] });
-    // yep this is bool, yep you can check either or just email or just usernme
+    // else if (username || email){
+    //     let sqlu = 'SELECT * FROM users WHERE Username = ?'
+    //     let sqle = 'SELECT * FROM users WHERE Email = ?'
+    //     //console.log("TEST")
+    //     checkInputs(sqlu, username)
+    //     checkInputs(sqle, email)
+    // }
     //if (!user) {
     // so here is logic for add new user
     // you want to send him confirmation email or so 
@@ -46,8 +99,15 @@ app.post('/register' , (req, res) => {
     // after that you add to db
     // for better track you log whats saved to db
     // console.log("USER ADDED TO DB ", {user:username,..})
-    
-    res.status(200).json({ success: true, message: "User succesfully registerd"})
+    //db.run("INSERT INTO users ")
+
+    //else
+    else {
+        res.status(200).json({ success: true, message: "User succesfully registered"})
+        User.findAll().then(users => {
+            console.log("All users:", JSON.stringify(users, null, 4));
+          });
+    }
     
     //} 
     //else{
@@ -61,8 +121,21 @@ app.post('/register' , (req, res) => {
     // here you do your logic checking if user exists in db
     // if he does your return some message like shown below 
     // do you have 
+
+    // function checkInputs(sql, field){
+    //     db.get(sql, [field], (err, row) => {
+    //         if (err) {
+    //           throw err;
+    //         }
+    //         if (row){
+    //             res.status(200).json({ success: true, message: field + ' is taken', })
+    //         }
+    //         else {
+    //             console.log(`You good`);
+    //         }
+    //     });
+    // }
         
-    // sry ignore this guys
 })
 
 
@@ -82,9 +155,3 @@ app.post('/login' , (req, res) => {
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
-
-
-
-
-// add node_modules to gitignore
-// passport for auth? (http://www.passportjs.org/)
