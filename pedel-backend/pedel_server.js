@@ -46,7 +46,7 @@ const User = db.define('user', {
     }
 });
 
-User.sync({ force: true });
+//User.sync({ force: true });
 
 // morgan is used to give OPTIONS and POST information about the req    
 // app.use(morgan('combined'))
@@ -63,12 +63,32 @@ app.use(bodyParser.json())
 
 
 // Register
-app.post('/register' , (req, res) => {
+app.post('/register' , async (req, res) => {
     // req will be what user send for frontend page from your login form like (email, password)
     // req is json so part of data you need is in `body` object
     const { username, email, password } = req.body;
     // TODO: Comment/remove this
     console.log(req.body)
+    let usernameCheck = null
+    let emailCheck = null
+    await User.findAll({
+        where: {
+            username: username
+          }
+    }).then(users => {
+        usernameCheck = (JSON.parse(JSON.stringify(users)).length)
+        console.log('UsernameCheck: ',usernameCheck)
+
+    })
+    await User.findAll({
+        where: {
+            email: email
+          }
+    }).then(users => {
+        emailCheck = (JSON.parse(JSON.stringify(users)).length)
+
+    })
+
 
             
     // now you want to validate data that client sent 
@@ -76,7 +96,13 @@ app.post('/register' , (req, res) => {
         res.status(200).json({ success: true, message: 'Missing field', });
     }
     
+    else if (usernameCheck > 0){
+        res.status(200).json({ success: true, message: 'Username Taken', });
+    }
 
+    else if (emailCheck > 0){
+        res.status(200).json({ success: true, message: 'Email Taken', });
+    }
 
 
     // see if name or email is occupied
@@ -104,9 +130,9 @@ app.post('/register' , (req, res) => {
     //else
     else {
         res.status(200).json({ success: true, message: "User succesfully registered"})
-        User.findAll().then(users => {
-            console.log("All users:", JSON.stringify(users, null, 4));
-          });
+        // User.findAll().then(users => {
+        //     console.log("All users:", JSON.stringify(users, null, 4));
+        //   });
     }
     
     //} 
