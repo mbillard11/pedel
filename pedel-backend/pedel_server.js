@@ -93,43 +93,21 @@ app.post('/register' , async (req, res) => {
             
     // now you want to validate data that client sent 
     if ( !username || !password || !email ) {
-        res.status(200).json({ success: true, message: 'Missing field', });
+        res.status(200).json({ success: false, message: 'Missing field', });
     }
     
     else if (usernameCheck > 0){
-        res.status(200).json({ success: true, message: 'Username Taken', });
+        res.status(200).json({ success: false, message: 'Username Taken', });
     }
 
     else if (emailCheck > 0){
-        res.status(200).json({ success: true, message: 'Email Taken', });
+        res.status(200).json({ success: false, message: 'Email Taken', });
     }
 
 
-    // see if name or email is occupied
-    // else if (username || email){
-    //     let sqlu = 'SELECT * FROM users WHERE Username = ?'
-    //     let sqle = 'SELECT * FROM users WHERE Email = ?'
-    //     //console.log("TEST")
-    //     checkInputs(sqlu, username)
-    //     checkInputs(sqle, email)
-    // }
-    //if (!user) {
-    // so here is logic for add new user
-    // you want to send him confirmation email or so 
-    // 
-    //....
-    
-    
-    // here your logic for adding user to user
-    // hasing pw
-    // after that you add to db
-    // for better track you log whats saved to db
-    // console.log("USER ADDED TO DB ", {user:username,..})
-    //db.run("INSERT INTO users ")
-
-    //else
     else {
-        res.status(200).json({ success: true, message: "User succesfully registered"})
+        User.create({ username: username, email: email, password: password, type: 'user' })
+        res.status(200).json({ success: true, message: 'User succesfully registered'})
         // User.findAll().then(users => {
         //     console.log("All users:", JSON.stringify(users, null, 4));
         //   });
@@ -166,18 +144,47 @@ app.post('/register' , async (req, res) => {
 
 
 // Login
-app.post('/login' , (req, res) => {
+app.post('/login' , async (req, res) => {
     // req will be what user send for frontend page from your login form like (email, password)
     // req is json so part of data you need is in `body` object
-    const { email, password } = req.body;
+    // const { email, password } = req.body;
 
-    // here you do your logic checking if user exists in db
-    // if he does your return some message like shown below 
+    // // here you do your logic checking if user exists in db
+    // // if he does your return some message like shown below 
         
-    let data = {
-    message: "user login"
+    // let data = {
+    // message: "user login"
+    // }
+    // res.json(data)
+
+    const { username, password } = req.body;
+
+    let usernameCheck = null;
+    //let member = null
+
+    const member = await User.findOne({
+        where: {
+            username: username
+        }
+    });
+     
+
+
+    if (!username || !password) {
+        res.status(200).json({ success: false, message: "Missing field" });
+    } else if (!member) {
+        res
+          .status(200)
+          .json({ success: false, message: "Username Does Not Exist" });
+    } else {
+        let pass = member.dataValues.password;
+        // /!== checks that is equal both value and type
+        if (password !== pass) {
+            res.status(200).json({ success: false, message: "Wrong Password!" });
+        } else {
+            res.status(200).json({ success: true, message: "User Logged In!" });
+        }
     }
-    res.json(data)
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

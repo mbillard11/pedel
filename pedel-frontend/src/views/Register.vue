@@ -10,7 +10,7 @@
         <label for="password">Password: </label>
         <el-input placeholder="Please enter desired password" v-model="formData.password"></el-input>
         <button @click.prevent="register()" >Submit</button>
-        <h1 v-if="regSuccess && regSuccess.success"> {{ regSuccess.message }}</h1>
+        <h1 v-if="regSuccess"> {{ regSuccess.message }}</h1>
       
     </form>
   </div>
