@@ -1,7 +1,6 @@
 <template>
   <header>
-      ...
-      
+    ...
   </header>
 </template>
 
