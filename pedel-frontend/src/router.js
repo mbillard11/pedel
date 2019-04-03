@@ -51,7 +51,13 @@ const router = new Router({
 });
 
 router.beforeEach((to, from, next) => {
-  console.log(from, to);
+  //   if (to.name === 'dashboard') {
+  //   /* check if user is logged in ( session exsists  ) */
+  //  if(userIsLoginedIn())
+  //     next()
+  //   } else {
+  //     next('/login');
+  //   }
   next();
 });
 

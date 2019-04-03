@@ -13,8 +13,6 @@ const passport = require('passport')
 // getting the local authentication type
 const LocalStrategy = require('passport-local').Strategy
 
-//User.sync({ force: true });
-
 // morgan is used to give OPTIONS and POST information about the req    
 // app.use(morgan('combined'))
 
@@ -65,8 +63,26 @@ const User = db.define('user', {
     type: {
         type: Sequelize.STRING
         // allowNull defaults to true
+    },
+    favourite_book: {
+        type: Sequelize.STRING
+        // allowNull defaults to true
+    },
+    favourite_genre: {
+        type: Sequelize.STRING
+        // allowNull defaults to true
+    },
+    num_books_read: {
+        type: Sequelize.STRING
+        // allowNull defaults to true
+    },
+    read_time: {
+        type: Sequelize.STRING
+        // allowNull defaults to true
     }
 });
+
+//User.sync({ force: true });
 
 // Register
 app.post('/register' , async (req, res) => {
@@ -109,7 +125,16 @@ app.post('/register' , async (req, res) => {
     }
 
     else {
-        User.create({ username: username, email: email, password: password, type: 'user' })
+        User.create({ 
+            username: username, 
+            email: email, 
+            password: password, 
+            type: 'user',
+            favourite_book: NaN,
+            favourite_genre: NaN,
+            num_books_read: NaN,
+            read_time: NaN
+         })
         res.status(200).json({ success: true, message: 'User succesfully registered'})
     }
            
@@ -133,8 +158,8 @@ app.post('/login' , (req, res, next) => {
           //res.send("Logged in");
           res.status(200).json({ success: true, message: "Logged in" })
           //console.log('USER: ',user)
-        });
-      })(req, res, next);
+        })
+      })(req, res, next)
 
     //const { username, password } = req.body;
 
@@ -168,7 +193,7 @@ app.post('/login' , (req, res, next) => {
 })
 
 app.get("/logout", function(req, res) {  
-    req.logout();
+    //req.logout();
   
     console.log("logged out")
   

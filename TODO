@@ -8,6 +8,7 @@ Todo:
   ☐ Database (sequelizejs) @today 
   ☐ Passport for auth? (http://www.passportjs.org/)
   ☐ Check inputs variable (field) logic
+  ☐ To add to user: Favorite book, favorite genre, number of books read, time read, time read leaderboard
 
   [DONE] Add node_modules to gitignore 
   [DONE] Update top donator (twitch)
