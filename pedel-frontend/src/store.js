@@ -3,8 +3,8 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
-function initialState () {
-  return { 
+function initialState() {
+  return {
     userData: {
       isLoggedIn: false,
       isAdmin: false,
@@ -12,7 +12,7 @@ function initialState () {
       email: null,
       password: null
     }
-   }
+  };
 }
 
 export default new Vuex.Store({
@@ -32,19 +32,22 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    loginState(state, logged, admin, username, email, password) {
-      state.userData.isLoggedIn = logged;
+    loginState(state, payload) {
+      state.userData.isLoggedIn = payload;
       // state.userData.isAdmin = admin
       // state.userData.username = username
       // state.userData.email = email
       // state.userData.password = password
     },
-    reset (state) {
+    userData(state, payload) {
+      state.userData = payload
+    },
+    reset(state) {
       // acquire initial state
-      const s = initialState()
+      const s = initialState();
       Object.keys(s).forEach(key => {
-        state[key] = s[key]
-      })
+        state[key] = s[key];
+      });
     }
   }
 });

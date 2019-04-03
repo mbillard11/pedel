@@ -1,19 +1,32 @@
 
 Todo:
-  ☐ Fix/update the TODO
+  ☐ Add router guards to library and profile @high 
+  ☐ Display user information in profile @critical 
+  ☐ Make profile editable, reflect changes in database @critical 
+  ☐ Add profile picture (optional) @low 
   ☐ gitignore.io (read up on what makes a good gitignore) @low
   ☐ Check todo extensions (figure out how to display under files) (Mark as done not responding) @low
-  ☐ Register section in pedel_server
-  ☐ Login section in pedel_server
-  ☐ Database (sequelizejs) @today 
-  ☐ Passport for auth? (http://www.passportjs.org/)
   ☐ Check inputs variable (field) logic
-  ☐ To add to user: Favorite book, favorite genre, number of books read, time read, time read leaderboard
+  ☐ time read, time read leaderboard @high
+  ☐ Use email to log in instead of username @high
+  ☐ View books from library table @critical 
+  ☐ logout button (must wipe info in store.js, change loggedin to false, and do soemthing with backend)
+  ☐ Maybe add view counter to library for each book (i.e. number of clicks)
+  ☐ Move navigation bar
+  ☐ Make navigation bar prettier @low 
 
   [DONE] Add node_modules to gitignore 
   [DONE] Update top donator (twitch)
+  Fix/update the TODO
+  Register section in pedel_server
+  Login section in pedel_server
+  Database (sequelizejs)
+  Passport for auth? (http://www.passportjs.org/)
+  Make register page like login
+  To add to user: Favorite book, favorite genre, number of books read
 
   NOTES:
     - Old sqlite3 in dependencies was 4.0.6
     - Sequelize problem was that we had sequelize installed in node_modules in the main pedel directory, and not in the pedel-backend's node_modules
     - Google difference between data schema and model
+    - For clearing store: https://github.com/vuejs/vuex/issues/1118#issuecomment-356286218

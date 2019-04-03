@@ -1,21 +1,21 @@
 <template>
   <header>
     <!-- <el-container> -->
-      <!-- <el-row type="flex" align="top"> -->
-      <el-row type="flex" align="middle">  
-        <el-col :span="6" >
-          <img alt="Vue logo" src="../assets/pedel_logo.png" />
-        </el-col>
-        <el-col :span="24"  :push="24">
-          <div id="nav">
-            <!-- <router-link to="/">Home</router-link> | -->
-            <router-link to="/library">Library</router-link> |
-            <router-link to="/profile">Profile</router-link> |
-            <!-- <router-link to="/logout">Logout</router-link> -->
-            <a href="#" @click="logout">Logout</a>
-          </div>
-        </el-col>
-      </el-row>
+    <!-- <el-row type="flex" align="top"> -->
+    <el-row type="flex" align="middle">
+      <el-col :span="6">
+        <img alt="Vue logo" src="../assets/pedel_logo.png" />
+      </el-col>
+      <el-col :span="24" :push="24">
+        <div id="nav">
+          <!-- <router-link to="/">Home</router-link> | -->
+          <router-link to="/library">Library</router-link> |
+          <router-link to="/profile">Profile</router-link> |
+          <!-- <router-link to="/logout">Logout</router-link> -->
+          <a href="#" @click="logout">Logout</a>
+        </div>
+      </el-col>
+    </el-row>
     <!-- </el-container> -->
   </header>
 </template>
@@ -24,7 +24,7 @@
 export default {
   methods: {
     logout() {
-      console.log(this.$store.state.userData)
+      console.log(this.$store.state.userData);
       this.$store.commit("reset");
       this.$router.push("/");
       // let data = this.$store.state.userData
@@ -41,9 +41,9 @@ export default {
       //       this.$router.push("/");
       //     }
       //   })
-        // .catch(error => {
-        //   console.log(error);
-        // });
+      // .catch(error => {
+      //   console.log(error);
+      // });
     }
   }
 };

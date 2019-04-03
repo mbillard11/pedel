@@ -51,6 +51,7 @@ export default {
           this.loginSuccess = data;
           // get admin status from response?
           this.$store.commit("loginState", true);
+          this.$store.commit("userData", data);
           if (data.success) {
             this.$router.push("/profile");
           }
