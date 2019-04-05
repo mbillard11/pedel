@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import createPersistedState from "vuex-persistedstate";
 
 Vue.use(Vuex);
 
@@ -16,6 +17,7 @@ function initialState() {
 }
 
 export default new Vuex.Store({
+  plugins: [createPersistedState()],
   state: {
     userData: {
       isLoggedIn: false,
@@ -34,13 +36,9 @@ export default new Vuex.Store({
   mutations: {
     loginState(state, payload) {
       state.userData.isLoggedIn = payload;
-      // state.userData.isAdmin = admin
-      // state.userData.username = username
-      // state.userData.email = email
-      // state.userData.password = password
     },
     userData(state, payload) {
-      state.userData = payload
+      state.userData = payload;
     },
     reset(state) {
       // acquire initial state

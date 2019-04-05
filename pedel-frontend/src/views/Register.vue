@@ -70,14 +70,20 @@ export default {
     register() {
       let data = JSON.parse(JSON.stringify(this.formData));
       console.log(data);
-      this.$axios
-        .post("http://localhost:3000/register", data)
+      this.$api
+        .post("/register", data)
         .then(response => {
           let data = response.data;
-          this.regSuccess = data;
-          if (data.success) {
-            this.$router.push("/login");
-          }
+          this.message= 'User succesfully registered. You will be redirected to the login page in 3 seconds.'
+            setTimeout(() => {
+              this.$router.push("/login");
+              this.message = '';
+            }, 3000);
+          // console.log(data)
+          // this.regSuccess = data;
+          // if (data.success) {
+          //   this.$router.push("/login");
+          // }
         })
         .catch(error => {
           console.log(error);

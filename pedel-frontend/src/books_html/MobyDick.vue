@@ -1,133 +1,5 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen"></style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
-  background-color: var(--darkreader-inline-bgcolor) !important;
-}
-[data-darkreader-inline-bgimage] {
-  background-image: var(--darkreader-inline-bgimage) !important;
-}
-[data-darkreader-inline-border] {
-  border-color: var(--darkreader-inline-border) !important;
-}
-[data-darkreader-inline-border-bottom] {
-  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
-}
-[data-darkreader-inline-border-left] {
-  border-left-color: var(--darkreader-inline-border-left) !important;
-}
-[data-darkreader-inline-border-right] {
-  border-right-color: var(--darkreader-inline-border-right) !important;
-}
-[data-darkreader-inline-border-top] {
-  border-top-color: var(--darkreader-inline-border-top) !important;
-}
-[data-darkreader-inline-boxshadow] {
-  box-shadow: var(--darkreader-inline-boxshadow) !important;
-}
-[data-darkreader-inline-color] {
-  color: var(--darkreader-inline-color) !important;
-}
-[data-darkreader-inline-fill] {
-  fill: var(--darkreader-inline-fill) !important;
-}
-[data-darkreader-inline-stroke] {
-  stroke: var(--darkreader-inline-stroke) !important;
-}
-[data-darkreader-inline-outline] {
-  outline-color: var(--darkreader-inline-outline) !important;
-}</style><style class="darkreader darkreader--user-agent" media="screen">html {
-    background-color: #252527 !important;
-}
-html, body, input, textarea, select, button {
-    background-color: #252527;
-}
-html, body, input, textarea, select, button {
-    border-color: #666562;
-    color: #fbf6ed;
-}
-a {
-    color: #5b9ce6;
-}
-table {
-    border-color: #5b5a57;
-}
-::placeholder {
-    color: #c9c3b8;
-}
-::selection {
-    background-color: #2667b4;
-    color: #ffffff;
-}
-::-moz-selection {
-    background-color: #2667b4;
-    color: #ffffff;
-}
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-select:-webkit-autofill {
-    background-color: #626623 !important;
-    color: #fbf6ed !important;
-}
-::-webkit-scrollbar {
-    background-color: #29292c;
-    color: #d5cfc5;
-}
-::-webkit-scrollbar-thumb {
-    background-color: #35373c;
-}
-::-webkit-scrollbar-thumb:hover {
-    background-color: #3a3f46;
-}
-::-webkit-scrollbar-thumb:active {
-    background-color: #424a55;
-}
-::-webkit-scrollbar-corner {
-    background-color: #252527;
-}
-* {
-    scrollbar-color: #35373c #29292c;
-}</style>
-    <title>
-      Moby Dick; Or the Whale, by Herman Melville
-    </title>
-    <style type="text/css" xml:space="preserve">
-
-    body { background:#ffffff; color:black; margin-left:15%; margin-right:15%; text-align:justify }
-    P { text-indent: 1em; margin-top: .25em; margin-bottom: .25em; }
-    H1,H2,H3,H4,H5,H6 { text-align: center; margin-left: 15%; margin-right: 15%; }
-    hr  { width: 50%; text-align: center;}
-    .foot { margin-left: 20%; margin-right: 20%; text-align: justify; text-indent: -3em; font-size: 90%; }
-    blockquote {font-size: 100%; margin-left: 0%; margin-right: 0%;}
-    .mynote    {background-color: #DDE; color: #000; padding: .5em; margin-left: 10%; margin-right: 10%; font-family: sans-serif; font-size: 95%;}
-    .toc       { margin-left: 10%; margin-bottom: .75em;}
-    .toc2      { margin-left: 20%;}
-    div.fig    { display:block; margin:0 auto; text-align:center; }
-    div.middle { margin-left: 20%; margin-right: 20%; text-align: justify; }
-    .figleft   {float: left; margin-left: 0%; margin-right: 1%;}
-    .figright  {float: right; margin-right: 0%; margin-left: 1%;}
-    .pagenum   {display:inline; font-size: 70%; font-style:normal;
-               margin: 0; padding: 0; position: absolute; right: 1%;
-               text-align: right;}
-    pre        { font-family: times new roman; font-size: 100%; margin-left: 10%;}
-
-    table      {margin-left: 10%;}
-
-a:link {color:blue;
-		text-decoration:none}
-link {color:blue;
-		text-decoration:none}
-a:visited {color:blue;
-		text-decoration:none}
-a:hover {color:red}
-
-</style><style class="darkreader darkreader--sync" media="screen"></style>
-  <style class="darkreader darkreader--override" media="screen">.jfk-bubble {
-    background-color: #0d0d0c !important;
-}
-.vimvixen-hint {
-    background-color: #7f6114 !important;
-    border-color: #dcbd48 !important;
-    color: #fff7da !important;
-}</style></head>
-  <body>
+<template>
+  <div>  
 <pre xml:space="preserve">
 The Project Gutenberg EBook of Moby Dick; or The Whale, by Herman Melville
 
@@ -25492,4 +25364,137 @@ subscribe to our email newsletter to hear about new eBooks.
   
 
 
-</body></html>
+</div>
+</template>
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen"></style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #252527 !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #252527;
+}
+html, body, input, textarea, select, button {
+    border-color: #666562;
+    color: #fbf6ed;
+}
+a {
+    color: #5b9ce6;
+}
+table {
+    border-color: #5b5a57;
+}
+::placeholder {
+    color: #c9c3b8;
+}
+::selection {
+    background-color: #2667b4;
+    color: #ffffff;
+}
+::-moz-selection {
+    background-color: #2667b4;
+    color: #ffffff;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #626623 !important;
+    color: #fbf6ed !important;
+}
+::-webkit-scrollbar {
+    background-color: #29292c;
+    color: #d5cfc5;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #35373c;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #3a3f46;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #424a55;
+}
+::-webkit-scrollbar-corner {
+    background-color: #252527;
+}
+* {
+    scrollbar-color: #35373c #29292c;
+}</style>
+
+
+<style type="text/css" xml:space="preserve">
+
+    body { background:#ffffff; color:black; margin-left:15%; margin-right:15%; text-align:justify }
+    P { text-indent: 1em; margin-top: .25em; margin-bottom: .25em; }
+    H1,H2,H3,H4,H5,H6 { text-align: center; margin-left: 15%; margin-right: 15%; }
+    hr  { width: 50%; text-align: center;}
+    .foot { margin-left: 20%; margin-right: 20%; text-align: justify; text-indent: -3em; font-size: 90%; }
+    blockquote {font-size: 100%; margin-left: 0%; margin-right: 0%;}
+    .mynote    {background-color: #DDE; color: #000; padding: .5em; margin-left: 10%; margin-right: 10%; font-family: sans-serif; font-size: 95%;}
+    .toc       { margin-left: 10%; margin-bottom: .75em;}
+    .toc2      { margin-left: 20%;}
+    div.fig    { display:block; margin:0 auto; text-align:center; }
+    div.middle { margin-left: 20%; margin-right: 20%; text-align: justify; }
+    .figleft   {float: left; margin-left: 0%; margin-right: 1%;}
+    .figright  {float: right; margin-right: 0%; margin-left: 1%;}
+    .pagenum   {display:inline; font-size: 70%; font-style:normal;
+               margin: 0; padding: 0; position: absolute; right: 1%;
+               text-align: right;}
+    pre        { font-family: times new roman; font-size: 100%; margin-left: 10%;}
+
+    table      {margin-left: 10%;}
+
+a:link {color:blue;
+		text-decoration:none}
+link {color:blue;
+		text-decoration:none}
+a:visited {color:blue;
+		text-decoration:none}
+a:hover {color:red}
+
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+  <style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #0d0d0c !important;
+}
+.vimvixen-hint {
+    background-color: #7f6114 !important;
+    border-color: #dcbd48 !important;
+    color: #fff7da !important;
+}</style>

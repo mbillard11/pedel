@@ -14,6 +14,10 @@ Todo:
   ☐ Maybe add view counter to library for each book (i.e. number of clicks)
   ☐ Move navigation bar
   ☐ Make navigation bar prettier @low 
+  ☐ Maybe change JWTSecret
+  ☐  Admin page @critical 
+  ☐ Array of books, v-for table
+  ☐ editable form for profile
 
   [DONE] Add node_modules to gitignore 
   [DONE] Update top donator (twitch)

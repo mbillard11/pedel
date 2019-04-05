@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <!-- logout -->
     <el-container v-if="isLoggedIn">
       <Header></Header>
     </el-container>
@@ -15,7 +14,6 @@
         </el-col>
       </el-row>
     </el-container>
-    <!-- login -->
     <router-view />
   </div>
 </template>

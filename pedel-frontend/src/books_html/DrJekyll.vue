@@ -1,146 +1,5 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen"></style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
-  background-color: var(--darkreader-inline-bgcolor) !important;
-}
-[data-darkreader-inline-bgimage] {
-  background-image: var(--darkreader-inline-bgimage) !important;
-}
-[data-darkreader-inline-border] {
-  border-color: var(--darkreader-inline-border) !important;
-}
-[data-darkreader-inline-border-bottom] {
-  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
-}
-[data-darkreader-inline-border-left] {
-  border-left-color: var(--darkreader-inline-border-left) !important;
-}
-[data-darkreader-inline-border-right] {
-  border-right-color: var(--darkreader-inline-border-right) !important;
-}
-[data-darkreader-inline-border-top] {
-  border-top-color: var(--darkreader-inline-border-top) !important;
-}
-[data-darkreader-inline-boxshadow] {
-  box-shadow: var(--darkreader-inline-boxshadow) !important;
-}
-[data-darkreader-inline-color] {
-  color: var(--darkreader-inline-color) !important;
-}
-[data-darkreader-inline-fill] {
-  fill: var(--darkreader-inline-fill) !important;
-}
-[data-darkreader-inline-stroke] {
-  stroke: var(--darkreader-inline-stroke) !important;
-}
-[data-darkreader-inline-outline] {
-  outline-color: var(--darkreader-inline-outline) !important;
-}</style><style class="darkreader darkreader--user-agent" media="screen">html {
-    background-color: #252527 !important;
-}
-html, body, input, textarea, select, button {
-    background-color: #252527;
-}
-html, body, input, textarea, select, button {
-    border-color: #666562;
-    color: #fbf6ed;
-}
-a {
-    color: #5b9ce6;
-}
-table {
-    border-color: #5b5a57;
-}
-::placeholder {
-    color: #c9c3b8;
-}
-::selection {
-    background-color: #2667b4;
-    color: #ffffff;
-}
-::-moz-selection {
-    background-color: #2667b4;
-    color: #ffffff;
-}
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-select:-webkit-autofill {
-    background-color: #626623 !important;
-    color: #fbf6ed !important;
-}
-::-webkit-scrollbar {
-    background-color: #29292c;
-    color: #d5cfc5;
-}
-::-webkit-scrollbar-thumb {
-    background-color: #35373c;
-}
-::-webkit-scrollbar-thumb:hover {
-    background-color: #3a3f46;
-}
-::-webkit-scrollbar-thumb:active {
-    background-color: #424a55;
-}
-::-webkit-scrollbar-corner {
-    background-color: #252527;
-}
-* {
-    scrollbar-color: #35373c #29292c;
-}</style>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<title>The Strange Case Of Dr. Jekyll And Mr. Hyde, by Robert Louis Stevenson</title>
-
-<style type="text/css">
-
-
-body { margin-left: 20%;
-       margin-right: 20%;
-       text-align: justify }
-
-p {text-indent: 1em;
-   margin-top: 0.25em;
-   margin-bottom: 0.25em; }
-
-h1, h2, h3, h4, h5, h6 {text-align: center; font-style: normal;
-font-weight: normal; line-height: 1.5; margin-top: .5em; margin-bottom:
-.5em;}
-
-h1 {font-size: 300%;
-    margin-top: 0.6em;
-    margin-bottom: 0.6em;
-    letter-spacing: 0.12em;
-    word-spacing: 0.2em;
-    text-indent: 0em;}
-h2 {font-size: 175%;}
-h3 {font-size: 150%;}
-h4 {font-size: 120%;}
-h5 {font-size: 110%;}
-
-p.right {text-align: right;
-         margin-right: 10%;
-         margin-top: 1em;
-         margin-bottom: 1em; }
-
-div.fig { display:block;
-          margin:0 auto;
-          text-align:center; }
-
-a:link {color:blue; text-decoration:none}
-a:visited {color:blue; text-decoration:none}
-a:hover {color:red}
-
-</style><style class="darkreader darkreader--sync" media="screen"></style>
-
-<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
-    background-color: #0d0d0c !important;
-}
-.vimvixen-hint {
-    background-color: #7f6114 !important;
-    border-color: #dcbd48 !important;
-    color: #fff7da !important;
-}</style></head>
-
-<body>
-
+<template>
+<div>
 <pre xml:space="preserve">
 The Project Gutenberg EBook of The Strange Case Of Dr. Jekyll And Mr. Hyde, by
 Robert Louis Stevenson
@@ -3736,4 +3595,142 @@ subscribe to our email newsletter to hear about new eBooks.
 
 
 
-</body></html>
+</div>
+</template>
+
+<style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen"></style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style><style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #252527 !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #252527;
+}
+html, body, input, textarea, select, button {
+    border-color: #666562;
+    color: #fbf6ed;
+}
+a {
+    color: #5b9ce6;
+}
+table {
+    border-color: #5b5a57;
+}
+::placeholder {
+    color: #c9c3b8;
+}
+::selection {
+    background-color: #2667b4;
+    color: #ffffff;
+}
+::-moz-selection {
+    background-color: #2667b4;
+    color: #ffffff;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #626623 !important;
+    color: #fbf6ed !important;
+}
+::-webkit-scrollbar {
+    background-color: #29292c;
+    color: #d5cfc5;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #35373c;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #3a3f46;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #424a55;
+}
+::-webkit-scrollbar-corner {
+    background-color: #252527;
+}
+* {
+    scrollbar-color: #35373c #29292c;
+}</style>
+<style type="text/css">
+
+
+body { margin-left: 20%;
+       margin-right: 20%;
+       text-align: justify }
+
+p {text-indent: 1em;
+   margin-top: 0.25em;
+   margin-bottom: 0.25em; }
+
+h1, h2, h3, h4, h5, h6 {text-align: center; font-style: normal;
+font-weight: normal; line-height: 1.5; margin-top: .5em; margin-bottom:
+.5em;}
+
+h1 {font-size: 300%;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    letter-spacing: 0.12em;
+    word-spacing: 0.2em;
+    text-indent: 0em;}
+h2 {font-size: 175%;}
+h3 {font-size: 150%;}
+h4 {font-size: 120%;}
+h5 {font-size: 110%;}
+
+p.right {text-align: right;
+         margin-right: 10%;
+         margin-top: 1em;
+         margin-bottom: 1em; }
+
+div.fig { display:block;
+          margin:0 auto;
+          text-align:center; }
+
+a:link {color:blue; text-decoration:none}
+a:visited {color:blue; text-decoration:none}
+a:hover {color:red}
+
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #0d0d0c !important;
+}
+.vimvixen-hint {
+    background-color: #7f6114 !important;
+    border-color: #dcbd48 !important;
+    color: #fff7da !important;
+}</style>

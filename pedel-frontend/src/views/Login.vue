@@ -4,10 +4,10 @@
       <el-row type="flex" justify="center">
         <el-col :span="12">
           <el-form ref="form" v-model="formData" label-width="120px">
-            <el-form-item label="Username">
+            <el-form-item label="Email">
               <el-input
-                v-model="formData.username"
-                placeholder="Please enter username"
+                v-model="formData.email"
+                placeholder="Please enter email"
               ></el-input>
             </el-form-item>
             <el-form-item label="Password">
@@ -21,10 +21,16 @@
               <el-button type="primary" @click="onSubmit">Login</el-button>
             </el-form-item>
           </el-form>
+              <el-alert
+               v-if="message"
+          title="Success"
+          type="success"
+          :description="message"
+          show-icon>
+        </el-alert>
         </el-col>
       </el-row>
     </el-container>
-    <h1 v-if="loginSuccess">{{ loginSuccess.message }}</h1>
   </div>
 </template>
 <script>
@@ -32,28 +38,27 @@ export default {
   data() {
     return {
       formData: {
-        username: "",
+        email: "",
         password: ""
       },
-      loginSuccess: {}
+      message: ''
     };
   },
   methods: {
     onSubmit() {
       let data = JSON.parse(JSON.stringify(this.formData));
-      console.log(data);
-      // The responce is a success and message objects. We print message above.
-      // We will use the success response to perform a redirect when True
-      this.$axios
-        .post("http://localhost:3000/login", data)
+      this.$api
+        .post("/login", data)
         .then(response => {
           let data = response.data;
-          this.loginSuccess = data;
-          // get admin status from response?
-          this.$store.commit("loginState", true);
-          this.$store.commit("userData", data);
-          if (data.success) {
-            this.$router.push("/profile");
+          if(data.token){
+            localStorage.setItem('token', data.token)
+            this.message= 'User succesfully logged in. You will be redirected to profile page in 3 seconds.'
+            setTimeout(() => {
+              this.$router.push("/profile");
+              this.$store.commit("loginState", true);
+              this.message = '';
+            }, 3000);
           }
         })
         .catch(error => {
